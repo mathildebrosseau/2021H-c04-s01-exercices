@@ -36,12 +36,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\doc\Vcpkg.md">
-      <Filter>Documentation</Filter>
-    </None>
-    <None Include="..\doc\Classroom.md">
-      <Filter>Documentation</Filter>
-    </None>
     <None Include="..\README.md" />
   </ItemGroup>
 </Project>

@@ -158,8 +158,6 @@
     <Text Include="data\data.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\doc\Classroom.md" />
-    <None Include="..\doc\Vcpkg.md" />
     <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

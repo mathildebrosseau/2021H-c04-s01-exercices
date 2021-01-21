@@ -16,34 +16,33 @@ using namespace std;
 using namespace std::literals;
 
 
-Arguments parseArgs(int argc, char* argv[])
-{
+Arguments parseArgs(int argc, char* argv[]) {
 	TCLAP::CmdLine parser("What is it, citizen?");
 
-	// TODO: Créer l'argument de pattern (-p et --pattern).
-	TCLAP::ValueArg<string> patternArg(
-		"p",
-		"pattern",
-		"The regular expression pattern to apply",
+	// TODO: Créer l'argument de nombre (--number)
+	TCLAP::ValueArg<int> numberArg(
+		"",
+		"number",
+		"The number used to calculate factorials and smaller multiples",
+		true,
+		0,
+		"int"
+	);
+	parser.add(&numberArg);
+	
+	// TODO: Créer l'argument de fichier (-f et --filename)
+	TCLAP::ValueArg<string> filenameArg(
+		"f",
+		"filename",
+		"The file to read",
 		true,
 		"",
 		"string"
 	);
-	parser.add(&patternArg);
-
-	// TODO: Créer l'argument de texte (-t et --text)
-	TCLAP::ValueArg<string> textArg(
-		"t",
-		"text",
-		"The regular expression pattern to apply",
-		true,
-		"",
-		"string"
-	);
-	parser.add(&textArg);
+	parser.add(&filenameArg);
 
 	parser.parse(argc, argv);
 
-	return {patternArg.getValue(), textArg.getValue()};
+	return {numberArg.getValue(), filenameArg.getValue()};
 }
 

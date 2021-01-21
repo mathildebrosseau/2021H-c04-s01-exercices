@@ -12,6 +12,9 @@
     <Filter Include="Documentation">
       <UniqueIdentifier>{8066e00c-b0de-4e03-aac1-b8bda3737425}</UniqueIdentifier>
     </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{4604596a-4776-45f9-b8d9-7ce7c7ff22d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arguments.hpp">
@@ -28,6 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
+    <Text Include="data\data.txt">
+      <Filter>data</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\doc\Vcpkg.md">

@@ -14,10 +14,9 @@ using namespace std;
 using namespace std::literals;
 
 
-struct Arguments
-{
-	string pattern;
-	string text;
+struct Arguments {
+	int    number;
+	string filename;
 };
 
 

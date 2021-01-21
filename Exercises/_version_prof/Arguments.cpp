@@ -21,11 +21,25 @@ Arguments parseArgs(int argc, char* argv[]) {
 
 	// Exo 2 : Arguments du programme
 	// TODO: Créer l'argument de nombre (--number)
-	TCLAP::ValueArg<int> numberArg; //...
+	TCLAP::ValueArg<int> numberArg(
+		"",
+		"number",
+		"The number used to calculate factorials and smaller multiples",
+		true,
+		0,
+		"int"
+	);
 	parser.add(numberArg);
 	
 	// TODO: Créer l'argument de fichier (-f et --filename)
-	TCLAP::ValueArg<string> filenameArg; //...
+	TCLAP::ValueArg<string> filenameArg(
+		"f",
+		"filename",
+		"The file to read",
+		true,
+		"",
+		"string"
+	);
 	parser.add(filenameArg);
 
 	parser.parse(argc, argv);

@@ -19,6 +19,7 @@ using namespace std::literals;
 Arguments parseArgs(int argc, char* argv[]) {
 	TCLAP::CmdLine parser("What is it, citizen?");
 
+	// Exo 2 : Arguments du programme
 	// TODO: Créer l'argument de nombre (--number)
 	TCLAP::ValueArg<int> numberArg(
 		"",

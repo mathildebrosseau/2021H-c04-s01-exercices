@@ -27,18 +27,21 @@ const double taxRate = 0.15;
 
 
 int main(int argc, char* argv[]) {
+	// Exo 2 : Arguments du programme
 	// TODO: Traiter les arguments de ligne de commande.
 	Arguments args = parseArgs(argc, argv);
 
+	// Exo 1 : Bonjour, le monde
 	// TODO: Faire un hello world.
 	cout << "Hello, world!" << "\n\n";
 
+	// Exo 3 : Multiples de 3
 	// TODO: Afficher les multiples de 3 plus petits que `number` (passé en paramètre).
-	for (int i : iter::range(0, args.number, factor))
+	for (int i : iter::range(factor, args.number, factor))
 		cout << i << " ";
 	cout << "\n\n";
 
-	// TODO: Lire le fichier et afficher la facture.
+	// Exo 4 : Facture
 	// TODO: Ouvrir le fichier et vérifier l'ouverture.
 	ifstream file(args.filename);
 	if (file.fail()) {
@@ -50,8 +53,8 @@ int main(int argc, char* argv[]) {
 	getline(file, clientName);
 	// TODO: Pour chaque ligne suivante:
 	double subTotal = 0.0;
-		// TODO: Lire le nom de l'item, sa quantité et son prix unitaire.
 	while (not ws(file).eof()) {
+		// TODO: Lire le nom de l'item, sa quantité et son prix unitaire.
 		struct Item {
 			string name;
 			int quantity;
